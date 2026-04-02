@@ -7,8 +7,10 @@ A classic Asteroids game built with Python and Pygame.
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install pygame
+pip install -r requirements.txt
 ```
+
+**Requirements:** pygame>=2.0.0
 
 ## Run
 
