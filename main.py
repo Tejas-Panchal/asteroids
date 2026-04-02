@@ -1,3 +1,4 @@
+import asteroid
 from shot import Shot
 from asteroid import Asteroid
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
@@ -41,6 +42,13 @@ def main():
             log_event("player_hit")
             print("game over")
             sys.exit()
+
+        for asteroid in asteriods:
+            for shot in shots:
+                if asteroid.collides_with(shot):
+                    log_event("asteroid_shot")
+                    shot.kill()
+                    asteroid.kill()
 
 
 if __name__ == "__main__":
